@@ -1,0 +1,130 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventia - Gestión de eventos</title>
+    <link rel="stylesheet" href="stylo.css">
+</head>
+<body>
+
+    <header class="encabezado">
+        <h1>✦ Eventia</h1>
+        <nav>
+            <a href="#inicio">Inicio</a>
+            <a href="#eventos">Eventos</a>
+            <a href="#nuevo-evento">Crear evento</a>
+        </nav>
+    </header>
+
+    <main class="contenedor" id="inicio">
+        <section class="bienvenida">
+            <div>
+                <p class="subtitulo">TU ESPACIO DE ORGANIZACIÓN</p>
+                <h2>Panel principal</h2>
+                <p>Organizá tus eventos y tené todo bajo control.</p>
+            </div>
+            <a href="#nuevo-evento" class="boton">+ Crear evento</a>
+        </section>
+
+        <section class="estadisticas">
+            <article class="tarjeta">
+                <p>Total de eventos</p>
+                <h3 id="total-eventos">3</h3>
+            </article>
+
+            <article class="tarjeta">
+                <p>Próximos eventos</p>
+                <h3 id="proximos-eventos">3</h3>
+            </article>
+
+            <article class="tarjeta">
+                <p>Total de invitados</p>
+                <h3 id="total-invitados">185</h3>
+            </article>
+        </section>
+
+        <section class="panel" id="eventos">
+            <h2>Eventos registrados</h2>
+            <p class="descripcion">
+                Consultá los eventos que estás organizando.
+            </p>
+
+            <div id="lista-eventos">
+                <!-- Los eventos se muestran mediante JavaScript -->
+            </div>
+        </section>
+
+        <section class="panel" id="nuevo-evento">
+            <h2>Registrar un evento</h2>
+            <p class="descripcion">
+                Completá los datos para agregar un nuevo evento.
+            </p>
+
+            <form id="form-evento">
+                <label for="nombre">Nombre del evento</label>
+                <input type="text" id="nombre"
+                       placeholder="Ej. Cumpleaños de Juan"
+                       required maxlength="80">
+
+                <label for="tipo">Tipo de evento</label>
+                <select id="tipo" required>
+                    <option value="">Seleccionar tipo</option>
+                    <option>Cumpleaños</option>
+                    <option>Casamiento</option>
+                    <option>Corporativo</option>
+                    <option>Graduación</option>
+                    <option>Conferencia</option>
+                    <option>Otro</option>
+                </select>
+
+                <div class="fila">
+                    <div>
+                        <label for="fecha">Fecha</label>
+                        <input type="date" id="fecha" required>
+                    </div>
+
+                    <div>
+                        <label for="hora">Hora</label>
+                        <input type="time" id="hora" required>
+                    </div>
+                </div>
+
+                <label for="lugar">Lugar del evento</label>
+                <input type="text" id="lugar"
+                       placeholder="Nombre del salón o dirección"
+                       required maxlength="100">
+
+                <label for="invitados">Cantidad de invitados</label>
+                <input type="number" id="invitados"
+                       min="1" max="10000"
+                       placeholder="Ej. 50" required>
+
+                <label for="estado">Estado</label>
+                <select id="estado">
+                    <option>Planificado</option>
+                    <option>Confirmado</option>
+                </select>
+
+                <div class="acciones">
+                    <button type="reset" class="boton-secundario">
+                        Limpiar
+                    </button>
+                    <button type="submit" class="boton">
+                        Guardar evento
+                    </button>
+                </div>
+            </form>
+
+            <p id="mensaje" role="status"></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>Eventia © 2026 - Sistema de organización de eventos</p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,276 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f6f5fc;
+    color: #292641;
+    line-height: 1.6;
+}
+
+.encabezado {
+    background-color: #ffffff;
+    padding: 20px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #e8e5f2;
+}
+
+.encabezado h1 {
+    color: #6d5ce7;
+    font-size: 27px;
+}
+
+nav {
+    display: flex;
+    gap: 22px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #65627b;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #6d5ce7;
+}
+
+.contenedor {
+    width: 86%;
+    max-width: 1200px;
+    margin: 35px auto;
+}
+
+.bienvenida {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 28px;
+}
+
+.subtitulo {
+    color: #6d5ce7;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+h2 {
+    margin: 5px 0;
+    font-size: 25px;
+}
+
+.bienvenida p:last-child,
+.descripcion {
+    color: #85829a;
+    font-size: 14px;
+}
+
+.boton,
+.boton-secundario {
+    display: inline-block;
+    padding: 12px 18px;
+    border: none;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.boton {
+    background-color: #6d5ce7;
+    color: white;
+}
+
+.boton:hover {
+    background-color: #5847d0;
+}
+
+.boton-secundario {
+    background-color: #eeedf5;
+    color: #55516e;
+}
+
+.estadisticas {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+    margin-bottom: 25px;
+}
+
+.tarjeta,
+.panel {
+    background-color: white;
+    border: 1px solid #eae8f2;
+    border-radius: 13px;
+    padding: 23px;
+}
+
+.tarjeta p {
+    color: #77748e;
+    font-size: 13px;
+}
+
+.tarjeta h3 {
+    color: #6d5ce7;
+    font-size: 30px;
+    margin-top: 8px;
+}
+
+.panel {
+    margin-bottom: 25px;
+}
+
+.panel h2 {
+    font-size: 19px;
+}
+
+.descripcion {
+    margin-bottom: 18px;
+}
+
+.evento {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    padding: 17px 0;
+    border-top: 1px solid #eeedf5;
+}
+
+.evento h3 {
+    font-size: 15px;
+}
+
+.evento p {
+    color: #85829a;
+    font-size: 12px;
+}
+
+.etiqueta {
+    display: inline-block;
+    padding: 4px 8px;
+    margin-top: 7px;
+    border-radius: 5px;
+    background-color: #f0edff;
+    color: #6d5ce7;
+    font-size: 11px;
+}
+
+.invitados {
+    text-align: center;
+    white-space: nowrap;
+}
+
+.invitados strong,
+.invitados small {
+    display: block;
+}
+
+.invitados small {
+    color: #85829a;
+    font-size: 11px;
+}
+
+form label {
+    display: block;
+    margin: 16px 0 7px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+input,
+select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #dedce9;
+    border-radius: 8px;
+    background: white;
+    color: #292641;
+    font-size: 13px;
+}
+
+input:focus,
+select:focus {
+    outline: 2px solid #dcd5ff;
+    border-color: #6d5ce7;
+}
+
+.fila {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+.acciones {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 22px;
+}
+
+#mensaje {
+    margin-top: 12px;
+    font-size: 13px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    color: #85829a;
+    font-size: 12px;
+}
+
+@media (max-width: 650px) {
+    .encabezado {
+        flex-direction: column;
+        gap: 14px;
+    }
+
+    nav {
+        gap: 13px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .contenedor {
+        width: 92%;
+        margin-top: 25px;
+    }
+
+    .bienvenida {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .estadisticas {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .tarjeta {
+        padding: 17px;
+    }
+
+    .evento {
+        align-items: flex-start;
+    }
+
+    .fila {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+}

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Empleados | Eventia</title>
+  <link rel="stylesheet" href="../css/estilos.css">
+</head>
+<body>
+<header><a class="logo" href="../publico/index.html">EVENTIA</a><nav><a href="panel-admin.html">Resumen</a><a href="reservas.html">Reservas</a><a href="salones.html">Salones</a><a href="empleados.html">Empleados</a><a href="configuracion.html">Configuración</a><a href="../publico/index.html">Salir</a></nav></header>
+<main>
+<div class="layout"><aside class="sidebar"><h3>Menú</h3><a href="panel-admin.html">Resumen</a><a href="reservas.html">Reservas</a><a href="salones.html">Salones</a><a href="empleados.html">Empleados</a><a href="configuracion.html">Configuración</a><a href="../publico/index.html">Salir</a></aside><section class="contenido"><h1>Gestión de empleados</h1><p class="subtitulo">Invitá empleados y administrá el personal de tu sucursal.</p><section class="panel formulario"><h3>Invitar nuevo empleado</h3><form action="#" method="post"><div class="campo"><label for="nombre">Nombre y apellido</label><input id="nombre" name="nombre" required></div><div class="campo"><label for="email">Correo electrónico</label><input type="email" id="email" name="email" required></div><input type="hidden" name="rol" value="empleado"><button type="submit">Enviar invitación</button></form><p class="nota">La invitación se asociará a la sucursal del administrador. El envío de correo y la creación del token se implementarán con PHP.</p></section><h3 style="margin:24px 0 12px">Invitaciones y empleados</h3><div class="tabla-contenedor"><table><thead><tr><th>Nombre</th><th>Correo</th><th>Tipo</th><th>Estado</th></tr></thead><tbody><tr><td>Empleado de ejemplo</td><td>empleado@correo.com</td><td>Empleado</td><td><span class="estado pendiente">Invitación pendiente</span></td></tr></tbody></table></div></section></div>
+</main>
+<footer><p>Eventia · Sistema de gestión de salones para eventos</p></footer>
+</body>
+</html>
